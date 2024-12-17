@@ -1,8 +1,10 @@
 from django.test import TestCase
 
-from product.factories import CategoryFactory, ProductFactory
-from product.serializers import CategorySerializer
+from Product.factories import CategoryFactory
+from Product.serializers import CategorySerializer
 
+import os
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bookstore.settings')
 
 class TestCategorySerializer(TestCase):
     def setUp(self) -> None:

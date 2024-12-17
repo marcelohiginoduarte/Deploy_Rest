@@ -4,8 +4,8 @@ from django.urls import reverse
 from rest_framework.test import APIClient, APITestCase
 from rest_framework.views import status
 
-from product.factories import CategoryFactory
-from product.models import Category
+from Product.factories import CategoryFactory
+from Product.models import Category
 
 
 class CategoryViewSet(APITestCase):
