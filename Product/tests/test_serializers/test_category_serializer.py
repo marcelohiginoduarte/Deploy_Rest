@@ -4,7 +4,7 @@ from Product.factories import CategoryFactory
 from Product.serializers import CategorySerializer
 
 import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'bookstore.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Projeto_REST_FAST_API.settings')
 
 class TestCategorySerializer(TestCase):
     def setUp(self) -> None:
@@ -14,4 +14,4 @@ class TestCategorySerializer(TestCase):
     def test_order_serializer(self):
         serializer_data = self.category_serializer.data
 
-        self.assertEquals(serializer_data["title"], "food")
+        self.assertEqual(serializer_data["title"], "food")

@@ -1,8 +1,8 @@
 import factory
 
 
-from Product.models import Product
-from Product.models import Category
+from Product.models.product import Product
+from Product.models.category import Category
 
 class CategoryFactory(factory.django.DjangoModelFactory):
     title = factory.Faker('pystr')
@@ -26,3 +26,6 @@ class ProductFactory(factory.django.DjangoModelFactory):
         if extracted:
             for category in extracted:
                 self.category.add(category)
+
+        class Meta:
+            model = Product
