@@ -1,10 +1,8 @@
 from django.test import TestCase
 
-from Product.factories import CategoryFactory
+from Product.factories import CategoryFactory, ProductFactory
 from Product.serializers import CategorySerializer
 
-import os
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Projeto_REST_FAST_API.settings')
 
 class TestCategorySerializer(TestCase):
     def setUp(self) -> None:
