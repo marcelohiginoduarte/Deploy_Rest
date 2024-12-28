@@ -1,9 +1,9 @@
 from django.test import TestCase
-
-from Product.factories import CategoryFactory, ProductFactory
+import pytest
+from Product.factories import CategoryFactory, productFactory
 from Product.serializers import CategorySerializer
 
-
+@pytest.mark.django_db
 class TestCategorySerializer(TestCase):
     def setUp(self) -> None:
         self.category = CategoryFactory(title="food")

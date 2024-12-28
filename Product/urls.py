@@ -6,8 +6,8 @@ from Product.viewset.category_viewset import CategoryViewSet
 
 
 router = routers.SimpleRouter()
-router.register(r"product", ProductViewSet, basename="Product")
-router.register(r"category", CategoryViewSet, basename="category")
+router.register(r'product', ProductViewSet, basename='Product')
+router.register(r'category', CategoryViewSet, basename='category')
 
 urlpatterns = [
     path("", include(router.urls)),

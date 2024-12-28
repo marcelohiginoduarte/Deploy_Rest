@@ -1,1 +1,1 @@
-from product_viewset import ProductViSert
+from Product.viewset.product_viewset import ProductViewSet

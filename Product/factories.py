@@ -1,6 +1,5 @@
 import factory
 
-
 from Product.models.product import Product
 from Product.models.category import Category
 
@@ -13,7 +12,7 @@ class CategoryFactory(factory.django.DjangoModelFactory):
     class Meta:
         model = Category
 
-class ProductFactory(factory.django.DjangoModelFactory):
+class productFactory(factory.django.DjangoModelFactory):
     price = factory.Faker('pyint')
     category = factory.SubFactory(CategoryFactory)
     title = factory.Faker('pystr')
