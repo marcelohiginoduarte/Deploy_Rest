@@ -6,8 +6,8 @@ from order.serializers import OrderSerializer
 
 class TestOrderSerializer(TestCase):
     def setUp(self) -> None:
-        self.product_1 = ProductFactory()
-        self.product_2 = ProductFactory()
+        self.product_1 = productFactory()
+        self.product_2 = productFactory()
 
         self.order = OrderFactory(product=(self.product_1, self.product_2))
         self.order_serializer = OrderSerializer(self.order)
